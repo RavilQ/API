@@ -1,0 +1,13 @@
+﻿@using static ASP.Controllers.ProductController
+
+@{
+    ViewData["Title"] = "detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Product pr = (Product)ViewData["Product"];
+}
+
+<h1>detail</h1>
+<h2>Product Name: @pr.Name</h2>
+<h2>Product Surname: @pr.Surname</h2>
+<h2>Product Id: @pr.Id</h2>
+<h3>product id: @TempData["id"]</h3>

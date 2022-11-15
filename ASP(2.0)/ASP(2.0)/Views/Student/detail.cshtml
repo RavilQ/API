@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewData["Title"] = "detail";
+    List<string> students = (List<string>)ViewBag.student;
+}
+
+<h1>THIS PAGE IS DETAIL</h1>
+<h3>Student id:@ViewBag.id</h3>
+
+
+<ol>
+
+  
+   @for (int i = 0; i <students.Count; i++)
+    {
+        @if (ViewBag.id == 0 || ViewBag.id > 6)
+        {
+            <li>
+                @students[i]
+            </li>
+
+        }
+        else
+        {
+            if (ViewBag.id ==i+1)
+            {
+                <h1>@students[i]</h1>
+            }
+        }
+        
+      
+    }
+
+
+
+</ol>
+
+<h1>Enter ID</h1>
